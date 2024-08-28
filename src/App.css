@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#vehicle-data td,
+#vehicle-data th {
+  padding: 12px 24px;
+}
