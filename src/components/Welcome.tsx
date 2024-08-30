@@ -8,7 +8,7 @@ const Welcome = () => {
     !isAuthenticated && (
       <div className="mx-atuo flex flex-col justify-center items-center mt-20 rounded bg-white space-y-2 p-4">
         <h1 className="center text-3xl text-primary">Welcome</h1>
-        <p text-xl>Please sign in to view the dashboard</p>
+        <p className="text-xl">Please sign in to view the dashboard</p>
         <AuthenticationButton />
       </div>
     )

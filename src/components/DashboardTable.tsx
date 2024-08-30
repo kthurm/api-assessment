@@ -4,7 +4,7 @@ import useFetchData from "./hooks/UseAxios";
 
 const DashboardTable = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [recordsPerPage] = useState<number>(15);
+  const [recordsPerPage] = useState<number>(20);
 
   const { vehicles, loading, formatDate } = useFetchData();
 
