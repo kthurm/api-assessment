@@ -46,24 +46,34 @@ const AxlesBar = () => {
   const options = {
     indexAxis: "y",
     responsive: true,
+    legend: {
+      display: false,
+      legendText: ["Axles"],
+    },
     plugins: {
       legend: {
-        position: "bottom",
+        dislpay: false,
       },
       tooltip: {
         backgroundColor: "#555",
         usePointStyle: true,
       },
+      subtitle: {
+        display: false,
+      },
     },
     elements: {
       bar: {
-        borderWidth: 2,
+        borderWidth: 1,
       },
     },
   };
 
   return (
-    <div id="bar-chart">
+    <div className="w-[600px] mt-24" id="bar-chart">
+      <h1 className="text-center font-bold text-xl text-primary pb-5">
+        Vehicle Axle Snapshot
+      </h1>
       <Bar data={data} options={options} />
     </div>
   );

@@ -57,10 +57,11 @@ const VehicleDoughnut = () => {
         backgroundColor: "#555",
         usePointStyle: true,
       },
-      //   title: {
-      //     display: true,
-      //     text: "Vehicle Classification Snapshot",
-      //   },
+      animations: {
+        tension: {
+          duration: 3000,
+        },
+      },
     },
     elements: {
       arc: {
@@ -70,7 +71,10 @@ const VehicleDoughnut = () => {
   };
 
   return (
-    <div id="doughnut-chart">
+    <div className="w-[450px]" id="doughnut-chart">
+      <h1 className="text-center font-bold text-xl text-primary pb-5">
+        Vehicle Classification Snapshot
+      </h1>
       <Doughnut data={data} options={options} />
     </div>
   );
