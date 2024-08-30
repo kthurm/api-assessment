@@ -24,7 +24,7 @@ export const Modal = ({ children, clickText = "Open" }) => {
   return (
     <>
       <button
-        className="relative mr-5 lg:mr-10 rounded-b-lg bg-primary text-white text-sm font-semibold px-3 py-2"
+        className="relative mr-5 lg:mr-10 rounded-b-lg bg-primary hover:bg-tertiary text-white text-sm font-semibold px-3 py-2"
         onClick={() => setShow(true)}
       >
         {clickText}
