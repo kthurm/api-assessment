@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-interface Vehicle {
-  timestamp: string;
-  classification: string;
-  axles: number;
-  height: number;
-}
-
-const client = axios.create({
-  baseURL: "http://44.222.172.90:8080",
-});
-
 const useFetchData = () => {
+  interface Vehicle {
+    timestamp: string;
+    classification: string;
+    axles: number;
+    height: number;
+  }
+
+  const client = axios.create({
+    baseURL: "http://44.222.172.90:8080",
+  });
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
 
