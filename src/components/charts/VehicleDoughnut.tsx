@@ -71,7 +71,7 @@ const VehicleDoughnut = () => {
   };
 
   return (
-    <div className="w-[450px]" id="doughnut-chart">
+    <div className="lg:w-[500px] xl:w-[450px]" id="doughnut-chart">
       <h1 className="text-center font-bold text-xl text-primary pb-5">
         Vehicle Classification Snapshot
       </h1>

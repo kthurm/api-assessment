@@ -15,7 +15,7 @@ const DashboardTable = () => {
   const nPages = Math.ceil(vehicles.length / recordsPerPage);
 
   return (
-    <div className="flex flex-col text-gray-900 mt-1.5 mx-4">
+    <div className="hidden sm:flex flex-col text-gray-900 mt-1.5 mx-4">
       {loading && <div>Loading</div>}
       {!loading && (
         <table
