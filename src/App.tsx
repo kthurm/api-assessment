@@ -1,21 +1,23 @@
 import "./App.css";
-import { Auth0Provider } from "@auth0/auth0-react";
-
 import Dashboard from "./components/Dashboard";
+import NavBar from "./components/NavBar";
+import Welcome from "./components/Welcome";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
+  const { isLoading, error } = useAuth0();
   return (
-    <Auth0Provider
-      domain="dev-lykn8g7zkkep34m1.us.auth0.com"
-      clientId="mqLCpYRyYwh8RpaKRL4HiAxNlOieV0TH"
-      authorizationParams={{
-        redirect_uri: window.location.origin,
-      }}
-    >
-      <div className="w-screen h-screen flex flex-col justify-center items-center bg-orange-50">
-        <Dashboard />
-      </div>
-    </Auth0Provider>
+    <div className="w-screen h-screen flex flex-col font-sans">
+      {error && <p>Authenication Error</p>}
+      {!error && isLoading && <p>Loading...</p>}
+      {!error && !isLoading && (
+        <>
+          <NavBar />
+          <Welcome />
+          <Dashboard />
+        </>
+      )}
+    </div>
   );
 }
 

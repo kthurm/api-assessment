@@ -6,7 +6,7 @@ type Props = React.DetailedHTMLProps<
 const Button = (props: Props) => {
   return (
     <button
-      className="w-auto bg-dark text-white hover:bg-tertiary p-4"
+      className="w-fit bg-primary text-white hover:bg-tertiary font-medium py-1.5 px-3 rounded-lg shadow-md shadow-gray-400 text-xs"
       {...props}
     />
   );
