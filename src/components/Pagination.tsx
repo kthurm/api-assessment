@@ -24,7 +24,7 @@ const Pagination: React.FC<PaginationProps> = ({
       <ul className="lg:-ml-3 flex justify-around my-6">
         <li className="px-2">
           <a
-            className="hover:text-secondary text-dark font-bold"
+            className="hover:text-tertiary text-dark font-bold"
             onClick={goToPrevPage}
             href="#"
           >
@@ -38,7 +38,7 @@ const Pagination: React.FC<PaginationProps> = ({
           >
             <a
               onClick={() => setCurrentPage(pgNumber)}
-              className="px-3"
+              className="px-3 hover:text-tertiary"
               href="#"
             >
               {pgNumber}
@@ -47,7 +47,7 @@ const Pagination: React.FC<PaginationProps> = ({
         ))}
         <li className="page-item">
           <a
-            className="hover:text-secondary text-dark font-bold"
+            className="hover:text-tertiary text-dark font-bold"
             onClick={goToNextPage}
             href="#"
           >
