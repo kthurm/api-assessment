@@ -21,10 +21,10 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <nav>
-      <ul className="flex justify-content-center">
+      <ul className="lg:-ml-3 flex justify-around my-6">
         <li className="px-2">
           <a
-            className="hover:text-secondary text-tertiary"
+            className="hover:text-secondary text-dark font-bold"
             onClick={goToPrevPage}
             href="#"
           >
@@ -46,7 +46,11 @@ const Pagination: React.FC<PaginationProps> = ({
           </li>
         ))}
         <li className="page-item">
-          <a className="page-link" onClick={goToNextPage} href="#">
+          <a
+            className="hover:text-secondary text-dark font-bold"
+            onClick={goToNextPage}
+            href="#"
+          >
             Next
           </a>
         </li>
