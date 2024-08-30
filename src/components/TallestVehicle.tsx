@@ -1,4 +1,5 @@
 import useFetchData from "./hooks/UseAxios";
+import { Modal } from "./ui/Modal";
 
 const RecentVehicle = () => {
   const { vehicles, formatDate } = useFetchData();
@@ -12,12 +13,21 @@ const RecentVehicle = () => {
   }, vehicles[0]);
 
   return (
-    <div className="odd:bg-white even:bg-gray-100 text-sm">
-      <p>{formatDate(tallestVehicle.timestamp)}</p>
-      <p className="capitalize text-center">{tallestVehicle.classification}</p>
-      <p>{tallestVehicle.axles}</p>
-      <p>{tallestVehicle.height}</p>
-    </div>
+    <Modal clickText="Current Tallest Vehicle">
+      <div className="flex flex-col text-sm">
+        <p className="font-bold text-lg leading-none pb-3 pt-2">
+          Current Tallest Vehicle
+        </p>
+        <p className="capitalize">
+          <span className="font-semibold">Classification:</span>{" "}
+          {tallestVehicle.classification}
+        </p>
+        <p>
+          {" "}
+          <span className="font-semibold">Height:</span> {tallestVehicle.height}
+        </p>
+      </div>
+    </Modal>
   );
 };
 
