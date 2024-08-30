@@ -20,7 +20,7 @@ const DashboardTable = () => {
       {!loading && (
         <table
           id="vehicle-data"
-          className="table-auto bg-gray-100 shadow-2xl mt-1"
+          className="table-auto bg-gray-100 shadow-2xl mt-1 rounded-xl border-transparent"
         >
           <thead className="text-[.6rem] uppercase text-left text-gray-500 border border-b-gray-500">
             <tr>
