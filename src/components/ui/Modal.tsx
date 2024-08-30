@@ -24,7 +24,7 @@ export const Modal = ({ children, clickText = "Open" }) => {
   return (
     <>
       <button
-        className="relative mr-10 rounded-b-lg bg-primary text-white text-sm font-semibold px-3 py-2"
+        className="relative mr-5 lg:mr-10 rounded-b-lg bg-primary text-white text-sm font-semibold px-3 py-2"
         onClick={() => setShow(true)}
       >
         {clickText}
@@ -32,7 +32,7 @@ export const Modal = ({ children, clickText = "Open" }) => {
       {show && (
         <div
           ref={modalRef}
-          className="absolute right-10 top-0 rounded-b-lg bg-primary text-white shadow-lg p-5"
+          className="absolute right-5 lg:right-10 top-0 rounded-b-lg bg-primary text-white shadow-lg p-5"
           onClick={() => setShow(false)}
         >
           <div onClick={(e) => e.stopPropagation()}>
