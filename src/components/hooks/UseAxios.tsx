@@ -32,6 +32,10 @@ const useFetchData = () => {
       setLoading(false);
     };
     fetchData();
+    const interval = import.meta.env.VITE_REFRESH_INTERVAL;
+    const intervalId = setInterval(fetchData, interval);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return {
