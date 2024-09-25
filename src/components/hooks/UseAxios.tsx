@@ -5,12 +5,12 @@ const useFetchData = () => {
   interface Vehicle {
     timestamp: string;
     classification: string;
-    axles: number;
+    occupants: number;
     height: number;
   }
 
   const client = axios.create({
-    baseURL: "http://44.222.172.90:8080",
+    baseURL: "https://us-central1-vehicle-api-5bbbd.cloudfunctions.net",
   });
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,9 +23,10 @@ const useFetchData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await client.get<Vehicle[]>("/getData");
+        const response = await client.get<Vehicle[]>("/api");
         console.log("Vehicles Fetched");
         setVehicles(response.data);
+        console.log(vehicles);
       } catch (error) {
         console.log("Error fetching data", error);
       }
