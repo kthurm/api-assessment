@@ -2,7 +2,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import DashboardTable from "./DashboardTable";
 import TallestVehicle from "./TallestVehicle";
 import VehicleDoughnut from "./charts/VehicleDoughnut";
-import AxlesBar from "./charts/AxlesBar";
+import OccupantBar from "./charts/OccupantBar";
 
 const Dashboard = () => {
   const { isAuthenticated } = useAuth0();
@@ -18,7 +18,7 @@ const Dashboard = () => {
           </div>
           <div className="mx-auto mt-20 flex flex-col items-center">
             <VehicleDoughnut />
-            <AxlesBar />
+            <OccupantBar />
           </div>
         </div>
       </div>

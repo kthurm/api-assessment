@@ -2,7 +2,7 @@ import useFetchData from "./hooks/UseAxios";
 import { Modal } from "./ui/Modal";
 
 const RecentVehicle = () => {
-  const { vehicles, formatDate } = useFetchData();
+  const { vehicles } = useFetchData();
 
   if (vehicles.length === 0) {
     return <p>No vehicles available.</p>;

@@ -26,18 +26,19 @@ const DashboardTable = () => {
             <tr>
               <th>Time Stamp</th>
               <th>Classification</th>
-              <th>Axles</th>
+              <th>Occupants</th>
               <th>Height</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-200">
             {currentRecords.map((vehicle, index) => (
-              <tr key={index} className="odd:bg-white even:bg-gray-100 text-sm">
-                <td>{formatDate(vehicle.timestamp)}</td>
-                <td className="capitalize text-center">
-                  {vehicle.classification}
-                </td>
-                <td>{vehicle.axles}</td>
+              <tr
+                key={index}
+                className="odd:bg-white even:bg-gray-100 text-sm text-center"
+              >
+                <td className="text-left">{formatDate(vehicle.timestamp)}</td>
+                <td className="capitalize">{vehicle.classification}</td>
+                <td>{vehicle.occupants}</td>
                 <td>{vehicle.height}</td>
               </tr>
             ))}
